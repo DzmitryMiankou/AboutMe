@@ -14,7 +14,7 @@
 }
 
 .text__text {
-  width: 300px;
+  max-width: 300px;
   font-size: 12px;
   font-weight: 500;
   margin-left: -50px;

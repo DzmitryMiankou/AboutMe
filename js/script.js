@@ -51,7 +51,7 @@ const list = document.querySelector(`.drawer-menu_list`);
 
 const arrLink = [
   { text: "ПРО МЕНЯ", href: "#" },
-  { text: "МОЙ ОПЫТ", href: "#" },
+  { text: "МОЙ ОПЫТ", href: "practicle.html" },
   { text: "МОИ НАВЫКИ", href: "#" },
   { text: "МОИ РАБОТЫ", href: "#" },
   { text: "ПРАЙС-ЛИСТ", href: "#" },

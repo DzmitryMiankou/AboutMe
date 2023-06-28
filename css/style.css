@@ -35,6 +35,13 @@ body._active {
   background-size: cover;
 }
 
+.practice {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
 .page2 {
   width: 60%;
   margin: auto;
