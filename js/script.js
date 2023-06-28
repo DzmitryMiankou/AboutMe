@@ -6,9 +6,9 @@ window.addEventListener("load", function () {
 
 const footer = document.querySelector(`.social-block__social`);
 const arrIconFooter = [
-  "./icon/Facebook.svg",
-  "./icon/Github.svg",
-  "./icon/Instagram.svg",
+  "/icon/Facebook.svg",
+  "/icon/Github.svg",
+  "/icon/Instagram.svg",
 ];
 const className = "social-block__svg";
 const alt = "img";
