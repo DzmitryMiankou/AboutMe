@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: end;
+}
+
+.header__icon {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  margin: 20px 30px;
+  transition: var(--transition-time-button);
+}
+
+.header__line {
+  content: " ";
+  width: 30px;
+  height: 3px;
+  background-color: var(--black);
+}

@@ -1,0 +1,21 @@
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text__title {
+  font-size: 14px;
+}
+
+.text__subtitle {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.text__text {
+  width: 300px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: -50px;
+}
