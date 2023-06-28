@@ -1,10 +1,14 @@
 `use strict`;
 
+window.addEventListener("load", function () {
+  start();
+});
+
 const footer = document.querySelector(`.social-block__social`);
 const arrIconFooter = [
-  "/icon/Facebook.svg",
-  "/icon/Github.svg",
-  "/icon/Instagram.svg",
+  "./icon/Facebook.svg",
+  "./icon/Github.svg",
+  "./icon/Instagram.svg",
 ];
 const className = "social-block__svg";
 const alt = "img";
@@ -19,15 +23,13 @@ export function generateImgTeg(arrSrc, className, alt, fatherElem) {
     testImage();
     function imageFound() {
       const img = document.createElement("img");
-      img.src = `.${el}`;
+      img.src = `${el}`;
       img.className = `${className}`;
       img.alt = `${alt}`;
       fatherElem.append(img);
     }
   });
 }
-
-generateImgTeg(arrIconFooter, className, alt, footer);
 
 /////// Drawer ////////////////////////////////////////////////
 const openDrawerEl = document.querySelector(`.header__icon`);
@@ -77,4 +79,7 @@ export function generateNavLinkList(className, fatherElem, className2, arr) {
   });
 }
 
-generateNavLinkList("drawer-menu_list", list, "drawer-menu__link", arrLink);
+function start() {
+  generateImgTeg(arrIconFooter, className, alt, footer);
+  generateNavLinkList("drawer-menu_list", list, "drawer-menu__link", arrLink);
+}
