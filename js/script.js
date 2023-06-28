@@ -6,28 +6,20 @@ window.addEventListener("load", function () {
 
 const footer = document.querySelector(`.social-block__social`);
 const arrIconFooter = [
-  "/icon/Facebook.svg",
-  "/icon/Github.svg",
-  "/icon/Instagram.svg",
+  "icon/Facebook.svg",
+  "icon/Github.svg",
+  "icon/Instagram.svg",
 ];
 const className = "social-block__svg";
 const alt = "img";
 
 export function generateImgTeg(arrSrc, className, alt, fatherElem) {
   arrSrc.forEach((el) => {
-    function testImage() {
-      const tester = new Image();
-      tester.addEventListener("load", imageFound);
-      tester.src = el;
-    }
-    testImage();
-    function imageFound() {
-      const img = document.createElement("img");
-      img.src = `${el}`;
-      img.className = `${className}`;
-      img.alt = `${alt}`;
-      fatherElem.append(img);
-    }
+    const img = document.createElement("img");
+    img.src = `${el}`;
+    img.className = `${className}`;
+    img.alt = `${alt}`;
+    fatherElem.append(img);
   });
 }
 
