@@ -11,11 +11,20 @@ const alt = "img";
 
 export function generateImgTeg(arrSrc, className, alt, fatherElem) {
   arrSrc.forEach((el) => {
-    const img = document.createElement("img");
-    img.src = `${el}`;
-    img.className = `${className}`;
-    img.alt = `${alt}`;
-    fatherElem.append(img);
+    function testImage() {
+      const tester = new Image();
+      tester.addEventListener("load", imageFound);
+
+      tester.src = el;
+    }
+    testImage();
+    function imageFound() {
+      const img = document.createElement("img");
+      img.src = `${el}`;
+      img.className = `${className}`;
+      img.alt = `${alt}`;
+      fatherElem.append(img);
+    }
   });
 }
 

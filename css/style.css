@@ -117,7 +117,7 @@ body._active {
 .content-block__subtitle {
   display: flex;
   gap: 18px;
-  margin-left: 30px;
+  margin-left: 35px;
   margin-top: 50px;
 }
 
@@ -149,8 +149,8 @@ body._active {
   height: 1px;
   background-color: var(--black);
   position: absolute;
-  left: -37px;
-  top: 15px;
+  left: -42px;
+  top: 18px;
 }
 
 .content-block__circle {
