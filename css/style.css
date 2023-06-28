@@ -167,3 +167,8 @@ body._active {
   height: 345px;
   background-color: var(--black);
 }
+
+.erhertjhetje {
+  display: flex;
+  flex-direction: column;
+}

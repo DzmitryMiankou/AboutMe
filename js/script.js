@@ -2,9 +2,9 @@
 
 const footer = document.querySelector(`.social-block__social`);
 const arrIconFooter = [
-  "./icon/Facebook.svg",
-  "./icon/Github.svg",
-  "./icon/Instagram.svg",
+  "/icon/Facebook.svg",
+  "/icon/Github.svg",
+  "/icon/Instagram.svg",
 ];
 const className = "social-block__svg";
 const alt = "img";
@@ -19,7 +19,7 @@ export function generateImgTeg(arrSrc, className, alt, fatherElem) {
     testImage();
     function imageFound() {
       const img = document.createElement("img");
-      img.src = `${el}`;
+      img.src = `.${el}`;
       img.className = `${className}`;
       img.alt = `${alt}`;
       fatherElem.append(img);
