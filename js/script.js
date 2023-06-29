@@ -5,8 +5,8 @@ window.addEventListener("load", function () {
 });
 
 const footer = document.querySelector(`.social-block__social`);
-const listSvg2 = document.querySelector(`.page3-block__social`);
-const listSvg3 = document.querySelector(`.dsgsdggdsgds`);
+const listSvg2 = document.querySelector(`.page3__social-icon`);
+const listSvg3 = document.querySelector(`.drawer-icon `);
 const arrIconFooter = [
   "icon/Facebook.svg",
   "icon/Github.svg",
@@ -14,7 +14,7 @@ const arrIconFooter = [
 ];
 const className = "social-block__svg";
 const className2 = "page3-block__svg";
-const className3 = "page3-ergreblock__svg";
+const className3 = "drawer-icon__svg";
 const alt = "img";
 
 export function generateImgTeg(arrSrc, className, alt, fatherElem) {
@@ -28,8 +28,8 @@ export function generateImgTeg(arrSrc, className, alt, fatherElem) {
 }
 
 /////// Drawer ////////////////////////////////////////////////
-const openDrawerEl = document.querySelector(`.header__icon`);
-const closeDrawerEl = document.querySelector(`.drawer-content__close-button`);
+const openDrawerEl = document.querySelector(`#openDrawer`);
+const closeDrawerEl = document.querySelector(`#closeDrawer`);
 const drawer = document.querySelector(`.drawer`);
 const body = document.querySelector(`body`);
 const blureEl = document.querySelector(`.drawer-blure`);
@@ -40,18 +40,18 @@ blureEl?.addEventListener("click", closeDrawer);
 
 function openDrawer(event) {
   event.preventDefault();
-  drawer.classList.add(`_active`);
-  body.classList.add(`_active`);
+  drawer.classList.add(`drawer_active`);
+  body.classList.add(`body_noScroll`);
 }
 
 function closeDrawer(event) {
   event.preventDefault();
-  drawer.classList.remove(`_active`);
-  body.classList.remove(`_active`);
+  drawer.classList.remove(`drawer_active`);
+  body.classList.remove(`body_noScroll`);
 }
 ///////////////////////// generate a list in nav ////////////////////////
 
-const list = document.querySelector(`.drawer-menu_list`);
+const list = document.querySelector(`.drawer-menu__list`);
 
 const arrLink = [
   { text: "ПРО МЕНЯ", href: "#" },
@@ -79,7 +79,7 @@ function start() {
   generateImgTeg(arrIconFooter, className, alt, footer);
   generateImgTeg(arrIconFooter, className2, alt, listSvg2);
   generateImgTeg(arrIconFooter, className3, alt, listSvg3);
-  generateNavLinkList("drawer-menu_list", list, "drawer-menu__link", arrLink);
+  generateNavLinkList("drawer-menu__line", list, "drawer-menu__link", arrLink);
 }
 
 ///////////////////////// validate form ////////////////////////

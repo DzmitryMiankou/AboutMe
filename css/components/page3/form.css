@@ -1,16 +1,21 @@
-.input {
-  width: 14vw;
-  height: 40px;
-  padding: 5px;
-  border-radius: 0px;
-  border: 1px solid var(--black);
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.form-example {
+.contact {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.form-block {
   position: relative;
   width: 100%;
 }
-.label {
+.form-block__label {
   position: absolute;
   background: var(--white);
   font-size: 12px;
@@ -19,17 +24,12 @@
   top: -10px;
   padding: 3px;
 }
-
-form {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.contact {
-  display: flex;
-  gap: 25px;
-  justify-content: space-between;
+.form-block__input {
+  width: 14vw;
+  height: 40px;
+  padding: 5px;
+  border-radius: 0px;
+  border: 1px solid var(--black);
 }
 
 .input-text {

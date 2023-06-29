@@ -16,31 +16,43 @@
   <body class="body">
     <div class="page1">
       <header class="header">
-        <div class="header__icon">
-          <div class="header__line"></div>
-          <div class="header__line"></div>
-          <div class="header__line"></div>
+        <div id="openDrawer" class="list-button list-button_margin">
+          <div class="list-button__line"></div>
+          <div class="list-button__line"></div>
+          <div class="list-button__line"></div>
         </div>
         <div class="drawer">
           <div class="drawer-blure"></div>
           <div class="drawer-content">
-            <button class="drawer-content__close-button" type="button">
-              <img src="./icon/Close.svg" alt="svg" />
+            <button
+              id="closeDrawer"
+              class="drawer-content__close-button"
+              type="button"
+            >
+              <img
+                class="drawer-content__icon"
+                src="./icon/Close.svg"
+                alt="svg"
+              />
             </button>
             <nav class="drawer-menu">
-              <ul class="drawer-menu_list"></ul>
+              <ul class="drawer-menu__list"></ul>
             </nav>
-            <div class="dsgsdggdsgds"></div>
+            <div class="drawer-icon"></div>
           </div>
         </div>
       </header>
-      <div class="container">
+      <div class="about">
         <main class="main">
-          <p class="name">Меня зовут Александра Смит</p>
-          <h1 class="porfe">Я web-разработчик из города Москва</h1>
-          <div class="main-buttons">
-            <button type="button" class="main-buttons_button">Портфолио</button>
-            <button type="button" class="main-buttons_button">Про меня</button>
+          <p class="main__name">Меня зовут Александра Смит</p>
+          <h1 class="main__title">Я web-разработчик из города Москва</h1>
+          <div class="about-buttons">
+            <button type="button" class="about-buttons__button">
+              Портфолио
+            </button>
+            <button type="button" class="about-buttons__button">
+              Про меня
+            </button>
           </div>
         </main>
         <div class="social-block">
@@ -172,28 +184,40 @@
       </div>
     </div>
     <div class="page3">
-      <div>
-        <div class="title-block">
+      <div class="form-container">
+        <div class="title-form">
           <div class="title-block__title">Контакты</div>
-          <h2 class="title-block__subtitle">Свяжитесь со мной</h2>
-          <div class="title-block__line"></div>
+          <div>
+            <h2 class="title-block__subtitle">Свяжитесь со мной</h2>
+            <div class="title-block__line"></div>
+          </div>
         </div>
-        <p>Любым удобным для вас способом:</p>
-        <div class="page3-block__social"></div>
-        <p>Или оставьте ваши данные и я сама вам напишу:</p>
+        <div class="callMe">
+          <p class="page3__social-text">Любым удобным для вас способом:</p>
+          <div class="page3__social-icon"></div>
+          <p class="page3__title-form">
+            Или оставьте ваши данные и я сама вам напишу:
+          </p>
+        </div>
         <form id="form">
           <div class="contact">
-            <div class="form-example">
-              <label class="label" for="name">Ваше имя</label>
-              <input class="input" type="text" name="name" id="name" required />
+            <div class="form-block">
+              <label class="form-block__label" for="name">Ваше имя</label>
+              <input
+                class="form-block__input"
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
               <div class="error-message">
                 <p>неккоректоное имя. Пример "Иван"</p>
               </div>
             </div>
-            <div class="form-example">
-              <label class="label" for="email">Ваша почта</label>
+            <div class="form-block">
+              <label class="form-block__label" for="email">Ваша почта</label>
               <input
-                class="input"
+                class="form-block__input"
                 type="email"
                 name="email"
                 id="email"
@@ -204,8 +228,8 @@
               </div>
             </div>
           </div>
-          <div class="form-example">
-            <label class="label" for="text">Ваше сообщение</label>
+          <div class="form-block">
+            <label class="form-block__label" for="text">Ваше сообщение</label>
             <textarea
               name="text"
               class="input-text"

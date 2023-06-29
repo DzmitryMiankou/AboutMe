@@ -3,18 +3,25 @@
   justify-content: end;
 }
 
-.header__icon {
+.list-button {
   display: flex;
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
-  margin: 20px 30px;
   transition: var(--transition-time-button);
 }
 
-.header__line {
+.list-button.list-button_margin {
+  margin: 20px 30px;
+}
+
+.list-button__line {
   content: " ";
   width: 30px;
   height: 3px;
   background-color: var(--black);
+}
+
+.list-button:hover {
+  opacity: var(--opacity-transition);
 }
