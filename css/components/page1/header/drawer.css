@@ -1,3 +1,39 @@
+@keyframes menu-animation-in {
+  0% {
+    left: -400px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes blure-animation-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes menu-animation-out {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -400px;
+  }
+}
+
+@keyframes blure-animation-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .drawer {
   display: none;
 }
@@ -13,6 +49,12 @@
   position: absolute;
   z-index: 2;
   left: 0;
+  display: block;
+  animation: blure-animation-in 0.8s !important;
+}
+
+.drawer-blure.drawer_blure-active {
+  animation: blure-animation-out 0.8s !important;
 }
 
 .drawer-content {
@@ -27,6 +69,11 @@
   justify-content: center;
   align-items: flex-start;
   grid-template-rows: 0.5fr 2fr 0.2fr;
+  animation: menu-animation-in 0.8s !important;
+}
+
+.drawer-content.drawer-conten-active {
+  animation: menu-animation-out 0.8s !important;
 }
 
 .drawer-content__close-button {

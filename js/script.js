@@ -33,6 +33,7 @@ const closeDrawerEl = document.querySelector(`#closeDrawer`);
 const drawer = document.querySelector(`.drawer`);
 const body = document.querySelector(`body`);
 const blureEl = document.querySelector(`.drawer-blure`);
+const menuEl = document.querySelector(`.drawer-content`);
 
 openDrawerEl?.addEventListener("click", openDrawer);
 closeDrawerEl?.addEventListener("click", closeDrawer);
@@ -46,8 +47,14 @@ function openDrawer(event) {
 
 function closeDrawer(event) {
   event.preventDefault();
-  drawer.classList.remove(`drawer_active`);
-  body.classList.remove(`body_noScroll`);
+  blureEl.classList.add(`drawer_blure-active`);
+  menuEl.classList.add(`drawer-conten-active`);
+  setTimeout(() => {
+    drawer.classList.remove(`drawer_active`);
+    body.classList.remove(`body_noScroll`);
+    blureEl.classList.remove(`drawer_blure-active`);
+    menuEl.classList.remove(`drawer-conten-active`);
+  }, 700);
 }
 ///////////////////////// generate a list in nav ////////////////////////
 
