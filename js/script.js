@@ -106,6 +106,7 @@ function start() {
 ///////////////////////// validate form ////////////////////////
 const applicantForm = document.getElementById("form");
 const errElem = document.querySelectorAll(".error-message");
+const modalElem = document.querySelector(".form-button__modal");
 const emailRegex =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const nameRegex = /^[А-Я][а-яё]*$/;
@@ -120,6 +121,12 @@ async function postMessageServer(data) {
     const response = await fetch("https://reqres.in/api/posts", requestOptions);
     if (!response.ok) {
       console.log("err");
+    }
+    if (response.ok) {
+      modalElem.classList.add(`form-button__modal-active`);
+      setTimeout(() => {
+        modalElem.classList.remove(`form-button__modal-active`);
+      }, 5000);
     }
   } catch (error) {
     console.log("err");
