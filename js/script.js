@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
 
 const footer = document.querySelector(`.social-block__social`);
 const listSvg2 = document.querySelector(`.page3__social-icon`);
-const listSvg3 = document.querySelector(`.drawer-icon `);
+const listSvg3 = document.querySelector(`.drawer-icon`);
 const arrIconFooter = [
   "icon/Facebook.svg",
   "icon/Github.svg",
@@ -41,6 +41,14 @@ const menuEl = document.querySelector(`.drawer-content`);
 openDrawerEl?.addEventListener("click", openDrawer);
 closeDrawerEl?.addEventListener("click", closeDrawer);
 blureEl?.addEventListener("click", closeDrawer);
+window.addEventListener("click", closeClickList);
+
+function closeFast(params) {
+  drawer.classList.remove(`drawer_active`);
+  body.classList.remove(`body_noScroll`);
+  blureEl.classList.remove(`drawer_blure-active`);
+  menuEl.classList.remove(`drawer-conten-active`);
+}
 
 function openDrawer(event) {
   event.preventDefault();
@@ -48,15 +56,18 @@ function openDrawer(event) {
   body.classList.add(`body_noScroll`);
 }
 
+function closeClickList(event) {
+  if (event.target.classList.contains(`drawer-menu__link`)) {
+    closeFast();
+  }
+}
+
 function closeDrawer(event) {
   event.preventDefault();
   blureEl.classList.add(`drawer_blure-active`);
   menuEl.classList.add(`drawer-conten-active`);
   setTimeout(() => {
-    drawer.classList.remove(`drawer_active`);
-    body.classList.remove(`body_noScroll`);
-    blureEl.classList.remove(`drawer_blure-active`);
-    menuEl.classList.remove(`drawer-conten-active`);
+    closeFast();
   }, 700);
 }
 ///////////////////////// generate a list in nav ////////////////////////
@@ -65,11 +76,11 @@ const list = document.querySelector(`.drawer-menu__list`);
 
 const arrLink = [
   { text: "ПРО МЕНЯ", href: "#" },
-  { text: "МОЙ ОПЫТ", href: "#" },
+  { text: "МОЙ ОПЫТ", href: "#page2" },
   { text: "МОИ НАВЫКИ", href: "#" },
   { text: "МОИ РАБОТЫ", href: "#" },
   { text: "ПРАЙС-ЛИСТ", href: "#" },
-  { text: "КОНТАКТЫ", href: "#" },
+  { text: "КОНТАКТЫ", href: "#page3" },
 ];
 
 export function generateNavLinkList(className, fatherElem, className2, arr) {
