@@ -43,7 +43,7 @@ closeDrawerEl?.addEventListener("click", closeDrawer);
 blureEl?.addEventListener("click", closeDrawer);
 window.addEventListener("click", closeClickList);
 
-function closeFast(params) {
+function closeFast() {
   drawer.classList.remove(`drawer_active`);
   body.classList.remove(`body_noScroll`);
   blureEl.classList.remove(`drawer_blure-active`);

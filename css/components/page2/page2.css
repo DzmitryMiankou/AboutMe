@@ -1,0 +1,16 @@
+.page2__photo {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .page2__photo {
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .page2,
+  .page3 {
+    margin-top: 60px !important;
+  }
+}

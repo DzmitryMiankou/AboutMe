@@ -68,7 +68,7 @@
   display: grid;
   justify-content: center;
   align-items: flex-start;
-  grid-template-rows: 0.5fr 2fr 0.2fr;
+  grid-template-rows: 0.5fr 2fr 0.3fr;
   animation: menu-animation-in 0.8s !important;
 }
 
@@ -82,6 +82,11 @@
   cursor: pointer;
   width: 30px;
   margin-left: auto;
+  transition: var(--transition-time-button);
+}
+
+.drawer-content__close-button:hover {
+  opacity: var(--opacity-transition);
 }
 
 .drawer-menu {
@@ -136,6 +141,7 @@
   transform: rotate(90deg);
   cursor: pointer;
   width: 20px;
+  transition: var(--transition-time-button);
 }
 
 @media only screen and (max-width: 600px) {
