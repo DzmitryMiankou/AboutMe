@@ -30,7 +30,7 @@ export function generateImgTeg(arrSrc, className, alt, fatherElem) {
   });
 }
 
-/////// Drawer ////////////////////////////////////////////////
+/////// Drawer Wind////////////////////////////////////////////////
 const openDrawerEl = document.querySelector(`#openDrawer`);
 const closeDrawerEl = document.querySelector(`#closeDrawer`);
 const drawer = document.querySelector(`.drawer`);
