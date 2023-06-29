@@ -5,12 +5,6 @@ form {
   gap: 30px;
 }
 
-.contact {
-  display: flex;
-  gap: 25px;
-  justify-content: space-between;
-}
-
 .form-block {
   position: relative;
   width: 100%;
@@ -25,23 +19,30 @@ form {
   padding: 3px;
 }
 .form-block__input {
-  width: 14vw;
+  width: calc(100% - 30px);
   height: 40px;
-  padding: 5px;
+  padding: 5px 15px;
   border-radius: 0px;
   border: 1px solid var(--black);
 }
 
+.contact {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+}
+
 .input-text {
-  height: 190px;
+  height: 167px;
   resize: none;
   padding: 15px;
+  max-width: 1000px;
   width: calc(100% - 30px);
   border-radius: 0%;
   border: 1px solid var(--black);
 }
 
-.page3 button {
+.form-button {
   max-width: 220px;
   height: 45px;
   text-align: center;
@@ -54,7 +55,7 @@ form {
   transition: 0.2s;
 }
 
-.page3 button:hover {
+.form-button:hover {
   opacity: var(--opacity-transition);
 }
 
@@ -67,4 +68,30 @@ form {
   color: red;
   font-weight: 400;
   font-size: 12px;
+}
+
+@media only screen and (max-width: 1438px) {
+  .input-text {
+    height: 147px;
+  }
+}
+
+@media only screen and (max-width: 1368px) {
+  .input-text {
+    height: 105px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .contact {
+    flex-direction: column-reverse;
+  }
+  .form-block__input {
+    width: calc(100% - 30px);
+  }
+  .form-button {
+    margin: auto;
+    padding: 10px 30px;
+    white-space: nowrap;
+  }
 }

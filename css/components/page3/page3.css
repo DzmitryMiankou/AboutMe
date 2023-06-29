@@ -1,7 +1,6 @@
 .page3 {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   padding-bottom: 120px;
   gap: 70px;
 }
@@ -34,9 +33,20 @@
   gap: 20px;
 }
 
+.title-block__subtitle.title-block__subtitle-align {
+  text-align: left;
+}
+
 @media only screen and (max-width: 1300px) {
   .page3 {
-    flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column;
     height: auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .page3 {
+    padding-bottom: 70px;
   }
 }

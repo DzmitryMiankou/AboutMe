@@ -103,7 +103,7 @@ body.body_noScroll {
 .content-block__line {
   content: " ";
   width: 1px;
-  height: 345px;
+  height: 100%;
   background-color: var(--black);
 }
 
@@ -134,11 +134,15 @@ body.body_noScroll {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .social-block {
     display: none;
+  }
+  .page2 {
+    width: 95%;
   }
 }
