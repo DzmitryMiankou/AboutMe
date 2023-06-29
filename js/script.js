@@ -20,10 +20,13 @@ const alt = "img";
 export function generateImgTeg(arrSrc, className, alt, fatherElem) {
   arrSrc.forEach((el) => {
     const img = document.createElement("img");
+    const a = document.createElement("a");
     img.src = `${el}`;
     img.className = `${className}`;
     img.alt = `${alt}`;
-    fatherElem?.append(img);
+    a.href = "#header";
+    fatherElem?.append(a);
+    a?.append(img);
   });
 }
 

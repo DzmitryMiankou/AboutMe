@@ -13,6 +13,10 @@
   --transition-time-button: 0.2s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
