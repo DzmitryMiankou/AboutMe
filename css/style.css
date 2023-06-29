@@ -3,6 +3,8 @@
 @import url("components/page1/social/social.css");
 @import url("components/page2/title/title.css");
 @import url("components/page2/text.css");
+@import url("components/page3/page3.css");
+@import url("components/page3/form.css");
 
 :root {
   --blue-backgraund: rgb(184, 222, 255);
@@ -36,13 +38,14 @@ body._active {
 }
 
 .practice {
-  width: 90%;
+  width: 75%;
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
 
-.page2 {
+.page2,
+.page3 {
   width: 60%;
   margin: auto;
   margin-top: 120px;
