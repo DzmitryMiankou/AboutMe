@@ -90,7 +90,7 @@ form {
 
 @media only screen and (max-width: 1300px) {
   .contact {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .form-block__input {
     width: calc(100% - 30px);
