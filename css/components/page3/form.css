@@ -24,6 +24,9 @@ form {
   padding: 5px 15px;
   border-radius: 0px;
   border: 1px solid var(--black);
+  outline: none;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .contact {
@@ -40,6 +43,9 @@ form {
   width: calc(100% - 30px);
   border-radius: 0%;
   border: 1px solid var(--black);
+  outline: none;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .form-button {
